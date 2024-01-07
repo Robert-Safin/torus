@@ -5,7 +5,7 @@ import { CiBitcoin } from "react-icons/ci";
 const WhyTorus = () => {
   return (
     <div className="relative">
-      <div className="absolute inset-0 z-0 w-full h-full">
+      <div className="hidden tablet:block absolute inset-0 z-0 w-full h-full">
         <Scene />
       </div>
 
@@ -14,7 +14,7 @@ const WhyTorus = () => {
           <div className="flex flex-col tablet:flex-row">
             <div className="flex flex-col tablet:flex-row z-10">
               <div className="tablet:mt-40 space-y-8">
-                <h2 className="section-header text-card-white">Why Torus?</h2>
+                <h2 className="section-header text-card-white mt-10">Why Torus?</h2>
                 <p className="section-subheader text-card-white">
                   Lorem ipsum dolor sit amet consectetur. Sit cum lorem
                   vulputate nunc.
