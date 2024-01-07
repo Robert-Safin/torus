@@ -5,7 +5,7 @@ import PaddedContainer from "../ui/containers/PaddedContainer";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-[670px] relative">
       <video
         src="/torus-new.mov"
         autoPlay
@@ -19,8 +19,10 @@ const Hero = () => {
             <div className="grid grid-cols-1 w-[320px] mx-auto tablet:w-auto mt-[72px]">
               <h1 className="hero-header text-center">
                 Welcome to{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-theme-blue to-theme-secondary-blue
-                ">
+                <span
+                  className="bg-clip-text text-transparent bg-gradient-to-r from-theme-blue to-theme-secondary-blue
+                "
+                >
                   Torus
                 </span>
                 ,
