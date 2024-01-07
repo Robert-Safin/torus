@@ -5,7 +5,7 @@ import PaddedContainer from "../ui/containers/PaddedContainer";
 
 const Hero = () => {
   return (
-    <div className="w-full h-[670px] relative">
+    <div className="w-full h-[750px] relative">
       <video
         src="/torus-new.mov"
         autoPlay
@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="flex justify-center">
         <div className="w-full h-full absolute top-0 flex flex-col text-white justify-center items-center max-w-[1440px]">
           <PaddedContainer>
-            <div className="grid grid-cols-1 w-[320px] mx-auto tablet:w-auto mt-[72px]">
+            <div className="grid grid-cols-1 w-[320px] mx-auto tablet:w-auto mt-[100px]">
               <h1 className="hero-header text-center">
                 Welcome to{" "}
                 <span
@@ -31,7 +31,7 @@ const Hero = () => {
                 {" "}
                 the first LSD for TAO
               </h1>
-              <p className="hero-subheader my-3 tablet:my-4 text-center">
+              <p className="hero-subheader mt-3 tablet:mt-4 mb-6 tablet:mb-8 text-center">
                 Earn passive income with a Liquid Staking Derivative on the
                 Ethereum network
               </p>
