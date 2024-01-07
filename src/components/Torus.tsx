@@ -21,6 +21,7 @@ const Torus: FC<Props> = (props) => {
 
   const ref = useRef<THREE.TorusGeometry>(null!);
 
+
   useFrame((state, delta) => {
     ref.current.rotateZ(torusRotateZ);
     state.camera.lookAt(...cameraLookAt);
