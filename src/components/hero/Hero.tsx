@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="flex justify-center">
         <div className="w-full h-full absolute top-0 flex flex-col text-white justify-center items-center max-w-[1440px]">
           <PaddedContainer>
-            <div className="grid grid-cols-1 w-[320px] mx-auto tablet:w-auto">
+            <div className="grid grid-cols-1 w-[320px] mx-auto tablet:w-auto mt-[72px]">
               <h1 className="hero-header text-center">
                 Welcome to{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-theme-blue to-theme-secondary-blue
