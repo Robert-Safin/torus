@@ -2,26 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer components {
+  .numbers {
+    @apply font-poppins text-[20px];
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .body {
+    @apply font-geist text-[12px] tracking-[0.12px];
+  }
+
+  .button {
+    @apply font-inter font-semibold text-[14px] leading-[16px] tracking-[-0.5px]
+    tablet:text-[16px] tablet:leading-[22px] tablet:tracking-[-0.5px];
+  }
+
+  .sub-text {
+    @apply font-inter font-medium text-[10px] leading-[16px] tracking-[-0.5px]
+    tablet:text-[12px] tablet:leading-[22px] tablet:tracking-[-0.5px];
+  }
+
+  .text {
+    @apply font-inter font-medium text-[12px] tracking-[-0.5px]
+    tablet:text-[14px] leading-[21px];
+  }
+
+  .header {
+    @apply font-inter font-bold text-[16px] tracking-[-0.5px]
+    tablet:text-[20px];
+  }
+
+  .section-subheader {
+    @apply font-inter font-medium text-[16px] tracking-[-0.5px];
+  }
+
+  .section-header {
+    @apply font-inter font-bold text-[24px] tracking-[-1px]
+    tablet:text-[32px];
+  }
+
+  .hero-subheader {
+    @apply font-inter font-medium text-[16px] tracking-[-0.5px]
+    tablet:text-[20px];
+  }
+
+  .hero-header {
+    @apply font-inter font-bold text-[32px] tracking-[-0.5px]
+    tablet:text-[52px];
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
