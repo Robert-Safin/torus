@@ -5,7 +5,7 @@ import PaddedContainer from "../ui/containers/PaddedContainer";
 
 const Hero = () => {
   return (
-    <div className="w-full h-[750px] relative">
+    <div className="w-full h-[850px] tablet:h-screen relative">
       <video
         src="/torus-new.mov"
         autoPlay

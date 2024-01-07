@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 import PaddedContainer from "../ui/containers/PaddedContainer";
 import { FaWallet } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -9,11 +9,22 @@ const Navbar = () => {
   const { user, error, isLoading } = useUser();
   const [walledOpen, setWalletOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [y, setY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   return (
     <nav
-      className="w-full h-auto backdrop-blur-md fixed
-    top-0 text-white z-20 px-6 pt-6"
+      className={`w-full h-auto backdrop-blur-md fixed
+    top-0 text-white z-20 px-6 pt-6 transition-all duration-500
+    ${y > 800 ? "text-black" : "text-white"}
+    `}
     >
       <div className="flex justify-between">
         <p className="font-bruno">T O R U S</p>
@@ -29,7 +40,7 @@ const Navbar = () => {
             onMouseEnter={() => setWalletOpen(true)}
             onMouseLeave={() => setWalletOpen(false)}
           >
-            <FaWallet className="w-6 h-auto text-white" />
+            <FaWallet className="w-6 h-auto" />
             {walledOpen && (
               <div className="absolute bg-card-glass border border-glass-stroke right-0 top-[48px] py-4 px-8">
                 {!user && <a href="/api/auth/login">Login</a>}
@@ -43,7 +54,7 @@ const Navbar = () => {
             onMouseEnter={() => setMenuOpen(true)}
             onMouseLeave={() => setMenuOpen(false)}
           >
-            <RxHamburgerMenu className=" w-6 h-auto text-white" />
+            <RxHamburgerMenu className="w-6 h-auto" />
             {menuOpen && (
               <div className="absolute flex flex-col space-y-4 bg-card-glass border border-glass-stroke right-0 top-[48px] py-4 px-8">
                 <Link href="#">Home</Link>

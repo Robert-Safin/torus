@@ -39,7 +39,7 @@ const Layout: FC<Props> = async (props) => {
       className={`bg-theme-white ${inter.variable} ${geist.variable} ${bruno.variable} ${poppins.variable}`}
     >
       <UserProvider>
-        <body className="bg-theme-white min-w-[320px]">
+        <body className="bg-theme-white">
           <Navbar />
           {props.children}
         </body>

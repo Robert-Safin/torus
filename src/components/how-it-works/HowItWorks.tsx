@@ -25,7 +25,7 @@ const HowItWorks = () => {
           </h2>
         </PaddedContainer>
         <PaddedContainer>
-          <div className="grid grid-cols-1 pc:gap-y-10 pc:grid-cols-4">
+          <div className="grid grid-cols-1 pc:gap-y-10 pc:grid-cols-4 z-10">
             <div
               className="flex flex-row pc:flex-col pc:justify-between"
               onClick={() => setSelectedItem(1)}
