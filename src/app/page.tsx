@@ -18,9 +18,9 @@ export default async function Home() {
       {/* <ClientUser /> */}
       {/* <Scene/> */}
       <Hero/>
-      <div className='my-20'/>
+      <div className='my-10'/>
       <HowItWorks/>
-      <div className='my-20'/>
+      <div className='my-10'/>
     </div>
   )
 }
