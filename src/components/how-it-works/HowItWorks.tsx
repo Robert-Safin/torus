@@ -12,13 +12,13 @@ const HowItWorks = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedItem((prevState) => (prevState % 4) + 1);
-    }, 2 * 1000);
+    }, 3 * 1000);
 
     return () => clearInterval(interval);
   }, []);
   return (
     <WidthLimitContainer>
-      <div className="flex flex-col">
+      <div className="flex flex-row pc:flex-col">
         <PaddedContainer>
           <h2 className="text-left pc:text-center section-header transition-all duration-500 mb-6 pc:mb-0">
             How it works

@@ -1,8 +1,9 @@
 import { getSession } from '@auth0/nextjs-auth0';
 import ClientUser from '../components/ClientUser';
-import Scene from '../components/Canvas';
+import Scene from '../components/Scene';
 import Hero from '@/components/hero/Hero';
 import HowItWorks from '@/components/how-it-works/HowItWorks';
+import WhyTorus from '@/components/why-torus/WhyTorus';
 
 
 export default async function Home() {
@@ -21,6 +22,7 @@ export default async function Home() {
       <div className='my-10'/>
       <HowItWorks/>
       <div className='my-10'/>
+      <WhyTorus/>
     </div>
   )
 }

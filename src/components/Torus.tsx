@@ -21,7 +21,6 @@ const Torus: FC<Props> = (props) => {
 
   const ref = useRef<THREE.TorusGeometry>(null!);
 
-
   useFrame((state, delta) => {
     ref.current.rotateZ(torusRotateZ);
     state.camera.lookAt(...cameraLookAt);
@@ -31,7 +30,7 @@ const Torus: FC<Props> = (props) => {
     <>
       <mesh position={props.position} rotation={meshRotation}>
         <torusGeometry ref={ref} args={[1, 0.5, 16, 100]} />
-        <meshBasicMaterial color={"blue"} wireframe={true} />
+        <meshBasicMaterial color={"#B7BCFF"} wireframe={true} />
       </mesh>
     </>
   );

@@ -12,16 +12,16 @@ interface ThreeTorusState {
 }
 
 const useTorusThreeStore = create<ThreeTorusState>()((set) => ({
-  cameraLookAt: [10, 0, 0],
+  cameraLookAt: [2, 0, 0],
   setCameraLookAt: (x: number, y: number, z: number) =>
     set({ cameraLookAt: [x, y, z] }),
-  meshRotation: [Math.PI / 2, 0, 0],
+  meshRotation: [Math.PI / 1, 0, 0],
   setMeshRotation: (x: number, y: number, z: number) =>
     set({ meshRotation: [x, y, z] }),
-  cameraPosition: [0, 0, 4],
+  cameraPosition: [0, 0, 3],
   setCameraPosition: (x: number, y: number, z: number) =>
     set({ cameraPosition: [x, y, z] }),
-  torusRotateZ: 0.005,
+  torusRotateZ: 0.0005,
   setTorusRotateZ: (z: number) => set({ torusRotateZ: z }),
 }));
 
