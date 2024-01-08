@@ -1,29 +1,23 @@
 "use client";
-import { use, useEffect, useState } from "react";
-import PaddedContainer from "../ui/containers/PaddedContainer";
+import { useEffect, useState } from "react";
 import { FaWallet } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Link from "next/link";
+import useChangeNavColor from "@/app/lib/useChangeNavColor";
+
 const Navbar = () => {
   const { user, error, isLoading } = useUser();
   const [walledOpen, setWalletOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [y, setY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
+  const navColor = useChangeNavColor();
 
   return (
     <nav
       className={`w-full h-auto backdrop-blur-md fixed
     top-0 text-white z-20 px-6 pt-6 transition-all duration-500
-    ${y > 800 ? "text-black" : "text-white"}
+    ${navColor === "black" ? "text-text-black" : "text-white"}
     `}
     >
       <div className="flex justify-between">
