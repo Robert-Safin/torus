@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import WidthLimitContainer from "../ui/containers/WidthLimitContainer";
-import PaddedContainer from "../ui/containers/PaddedContainer";
+import WidthLimitContainer from "../../ui/containers/WidthLimitContainer";
+import PaddedContainer from "../../ui/containers/PaddedContainer";
 import { BsSafe } from "react-icons/bs";
 import { BsPiggyBank } from "react-icons/bs";
 import { MdOutlineGeneratingTokens } from "react-icons/md";
@@ -12,20 +12,20 @@ const HowItWorks = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedItem((prevState) => (prevState % 4) + 1);
-    }, 3 * 1000);
+    }, 4 * 1000);
 
     return () => clearInterval(interval);
   }, []);
   return (
     <WidthLimitContainer>
-      <div className="flex flex-row pc:flex-col">
+      <div className="flex flex-col tablet:flex-row tablet:justify-between pc:flex-col">
         <PaddedContainer>
           <h2 className="text-left pc:text-center section-header transition-all duration-500 mb-6 pc:mb-0">
             How it works
           </h2>
         </PaddedContainer>
         <PaddedContainer>
-          <div className="grid grid-cols-1 pc:gap-y-10 pc:grid-cols-4 z-10">
+          <div className="grid grid-cols-1 pc:gap-y-10 pc:grid-cols-4 z-10 space-y-4 tablet:space-y-8 pc:space-y-0">
             <div
               className="flex flex-row pc:flex-col pc:justify-between"
               onClick={() => setSelectedItem(1)}
@@ -48,14 +48,14 @@ const HowItWorks = () => {
                 ${selectedItem === 1 ? "bg-theme-blue" : "bg-line-gray"}
                 `}
                 />
-                <div
+                {/* <div
                   className={`w-[3px] h-1/2 pc:hidden  transition-all duration-500 absolute -z-10 bottom-0
                 ${selectedItem === 1 ? "bg-theme-blue" : "bg-line-gray"}
                 `}
-                />
+                /> */}
               </div>
               <div
-                className={`transition-all duration-500 border rounded-lg h-full mx-4 p-4 space-y-4 w-full pc:w-fit ${
+                className={`transition-all duration-500 border rounded-lg py-8 tablet:py-12 pc:py-8 h-full mx-4 p-4 space-y-4 w-full pc:w-fit ${
                   selectedItem === 1 ? "bg-theme-blue" : "bg-white"
                 }
                 ${selectedItem === 1 ? "shadow-xl" : "shadow-2xl"}
@@ -103,14 +103,14 @@ const HowItWorks = () => {
                 ${selectedItem === 2 ? "bg-theme-blue" : "bg-line-gray"}
                 `}
                 />
-                <div
+                {/* <div
                   className={`w-[3px] h-full pc:hidden  transition-all duration-500 absolute -z-10
                 ${selectedItem === 2 ? "bg-theme-blue" : "bg-line-gray"}
                 `}
-                />
+                /> */}
               </div>
               <div
-                className={`transition-all duration-500 border rounded-lg h-full mx-4 p-4 space-y-4 w-full pc:w-fit ${
+                className={`transition-all duration-500 border rounded-lg py-8 tablet:py-12 pc:py-8 h-full mx-4 p-4 space-y-4 w-full pc:w-fit ${
                   selectedItem === 2 ? "bg-theme-blue" : "bg-white"
                 }
                 ${selectedItem === 2 ? "shadow-xl" : "shadow-2xl"}
@@ -158,14 +158,14 @@ const HowItWorks = () => {
                 ${selectedItem === 3 ? "bg-theme-blue" : "bg-line-gray"}
                 `}
                 />
-                <div
+                {/* <div
                   className={`w-[3px] h-full pc:hidden  transition-all duration-500 absolute -z-10
                 ${selectedItem === 3 ? "bg-theme-blue" : "bg-line-gray"}
                 `}
-                />
+                /> */}
               </div>
               <div
-                className={`transition-all duration-500 border rounded-lg h-full mx-4 p-4 space-y-4 w-full pc:w-fit ${
+                className={`transition-all duration-500 border rounded-lg py-8 tablet:py-12 pc:py-8 h-full mx-4 p-4 space-y-4 w-full pc:w-fit ${
                   selectedItem === 3 ? "bg-theme-blue" : "bg-white"
                 }
                 ${selectedItem === 3 ? "shadow-xl" : "shadow-2xl"}
@@ -214,14 +214,14 @@ const HowItWorks = () => {
                 ${selectedItem === 4 ? "bg-theme-blue" : "bg-line-gray"}
                 `}
                 />
-                <div
+                {/* <div
                   className={`w-[3px] h-1/2 pc:hidden  transition-all duration-500 absolute -z-10 top-0
                 ${selectedItem === 4 ? "bg-theme-blue" : "bg-line-gray"}
                 `}
-                />
+                /> */}
               </div>
               <div
-                className={`transition-all duration-500 border rounded-lg h-full mx-4 p-4 space-y-4 w-full pc:w-fit ${
+                className={`transition-all duration-500 border rounded-lg py-8 tablet:py-12 pc:py-8 h-full mx-4 p-4 space-y-4 w-full pc:w-fit ${
                   selectedItem === 4 ? "bg-theme-blue" : "bg-white"
                 }
                 ${selectedItem === 4 ? "shadow-xl" : "shadow-2xl"}

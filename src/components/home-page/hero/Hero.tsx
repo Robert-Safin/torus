@@ -1,7 +1,7 @@
 "use client";
 
-import ButtonPrimary from "../ui/buttons/ButtonPrimary";
-import PaddedContainer from "../ui/containers/PaddedContainer";
+import ButtonPrimary from "../../ui/buttons/ButtonPrimary";
+import PaddedContainer from "../../ui/containers/PaddedContainer";
 
 const Hero = () => {
   return (

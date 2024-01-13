@@ -1,5 +1,5 @@
-import Scene from "../Scene";
-import PaddedContainer from "../ui/containers/PaddedContainer";
+import Scene from "../../Scene";
+import PaddedContainer from "../../ui/containers/PaddedContainer";
 import { CiBitcoin } from "react-icons/ci";
 
 const WhyTorus = () => {
@@ -12,14 +12,21 @@ const WhyTorus = () => {
       <div className="bg-gradient-to-b from-theme-blue to-theme-secondary-blue z-10 pb-20">
         <PaddedContainer>
           <div className="flex flex-col tablet:flex-row justify-center">
-            <div className="flex flex-col tablet:flex-row z-10">
-              <div className="tablet:mt-40 space-y-8">
+            <div className="flex flex-col tablet:flex-row z-10 tablet:space-x-10">
+              <div className="tablet:mt-10 space-y-8 tablet:w-1/2">
                 <h2 className="section-header text-card-white mt-10">
                   Why Torus?
                 </h2>
-                <p className="section-subheader text-card-white">
-                  Lorem ipsum dolor sit amet consectetur. Sit cum lorem
-                  vulputate nunc.
+                <p className="section-subheader text-card-white ">
+                  Lorumx ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris eget bibendum ex. Sed vitae urna vel nunc tincidunt
+                  aliquam. Lorumx ipsum dolor sit amet, consectetur adipiscing
+                  elit. Mauris eget bibendum ex. Sed vitae urna vel nunc
+                  tincidunt aliquam.Lorumx ipsum dolor sit amet, consectetur
+                  adipiscing elit. Mauris eget bibendum ex. Sed vitae urna vel
+                  nunc tincidunt aliquam. Lorumx ipsum dolor sit amet,
+                  consectetur adipiscing elit. Mauris eget bibendum ex. Sed
+                  vitae urna vel nunc tincidunt aliquam.
                 </p>
               </div>
               <div className="grid grid-cols-1 pc:grid-cols-2 bg-card-white shadow-2xl rounded-2xl p-8 gap-16 mt-20">

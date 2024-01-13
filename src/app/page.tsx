@@ -1,9 +1,9 @@
 import { getSession } from '@auth0/nextjs-auth0';
 import ClientUser from '../components/ClientUser';
 import Scene from '../components/Scene';
-import Hero from '@/components/hero/Hero';
-import HowItWorks from '@/components/how-it-works/HowItWorks';
-import WhyTorus from '@/components/why-torus/WhyTorus';
+import Hero from '@/components/home-page/hero/Hero';
+import HowItWorks from '@/components/home-page/how-it-works/HowItWorks';
+import WhyTorus from '@/components/home-page/why-torus/WhyTorus';
 
 
 export default async function Home() {
